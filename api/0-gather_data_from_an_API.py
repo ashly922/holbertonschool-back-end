@@ -2,13 +2,17 @@
 import requests
 
 def get_employee_todo_progress(employee_id):
-    '''function gets todo progress check'''
+    """
+    function gets todo progress check
+    """
     base_url = "https://jsonplaceholder.typicode.com"
     todo_url = f"{base_url}/todos?userId={employee_id}"
     user_url = f"{base_url}/users/{employee_id}"
 
     try:
-        '''Fetch the employee's TODO list'''
+        """
+        Fetch the employee's TODO list
+        """
         response = requests.get(todo_url)
         todo_data = response.json()
 
