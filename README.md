@@ -1,0 +1,1 @@
+This repository contains back end practice for holberton technology school.
