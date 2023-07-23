@@ -3,8 +3,6 @@ import requests
 
 def get_employee_todo_progress(employee_id):
     '''function gets todo progress check'''
-
-
     base_url = "https://jsonplaceholder.typicode.com"
     todo_url = f"{base_url}/todos?userId={employee_id}"
     user_url = f"{base_url}/users/{employee_id}"
@@ -32,6 +30,7 @@ def get_employee_todo_progress(employee_id):
             print("\t", task["title"])
 
     except requests.exceptions.RequestException as e:
+        '''handling error'''
         print("Error:", e)
 
 if __name__ == "__main__":
