@@ -4,6 +4,7 @@ module gets employee progress check on tasks
 """
 import requests
 
+
 def get_employee_todo_progress(employee_id):
     """
     function gets todo progress check
@@ -30,7 +31,8 @@ def get_employee_todo_progress(employee_id):
         total_tasks = len(todo_data)
 
         '''Display the progress'''
-        print(f"Employee {employee_name} is done with tasks({num_completed_tasks}/{total_tasks}):")
+        print(f"Employee {employee_name}\
+               is done with tasks({num_completed_tasks}/{total_tasks}):")
 
         '''Display the titles of completed tasks'''
         for task in completed_tasks:
@@ -41,9 +43,11 @@ def get_employee_todo_progress(employee_id):
         print("Error:", e)
 
 if __name__ == "__main__":
-    '''Get the employee ID from the user'''
+    
+
     try:
         employee_id = int(input("Enter the employee ID: "))
         get_employee_todo_progress(employee_id)
     except ValueError:
-        print("Invalid input. Please enter a valid integer for the employee ID.")
+        print("Invalid input. \
+              Please enter a valid integer for the employee ID.")
