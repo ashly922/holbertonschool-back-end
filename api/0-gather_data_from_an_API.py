@@ -38,6 +38,10 @@ def get_employee_todo_progress(employee_id):
         for task in completed_tasks:
             print("\t", task["title"])
 
+        '''write to student_output'''
+        with open("student_output", "w") as f:
+            f.write(employee_name)
+
     except requests.exceptions.RequestException as e:
         '''handling error'''
         print("Error:", e)
