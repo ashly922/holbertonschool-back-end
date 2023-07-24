@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import requests
-'''module gets employee progress check on tasks'''
+"""
+module gets employee progress check on tasks
+"""
 
 def get_employee_todo_progress(employee_id):
     """
