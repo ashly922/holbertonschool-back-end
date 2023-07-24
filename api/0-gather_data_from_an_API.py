@@ -42,8 +42,8 @@ def get_employee_todo_progress(employee_id):
         '''handling error'''
         print("Error:", e)
 
+
 if __name__ == "__main__":
-    
 
     try:
         employee_id = int(input("Enter the employee ID: "))
